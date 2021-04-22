@@ -15,5 +15,8 @@
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-scss": "^3.19.0",
     "webpack-dev-server": "^3.11.2"
+  },
+  "scripts": {
+    "stylelint": "npx stylelint \"**/*.{css,scss}\""
   }
 }
