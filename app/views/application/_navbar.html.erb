@@ -1,0 +1,18 @@
+<div class="col">
+  <nav class="navbar navbar-expand-lg navbar-light bg-info">
+    <div class="container-fluid">
+      <%= link_to root_path, class: "navbar-brand text-white" do %>
+        <h1>Members Club</h1>
+      <% end %>
+      <div>
+        <% if member_signed_in? %>
+          <%= link_to member.email, edit_member_registration_path, class: 'text-light d-inline-block me-3' %>
+          <%= link_to "Logout", destroy_member_session_path, method: :delete, class: 'text-danger' %>
+        <% else %>
+          <%= link_to "Log in", new_member_session_path, class: 'btn btn-success text-light' %>
+          <%= link_to "Sign up", new_member_registration_path, class: 'btn btn-danger text-light' %>
+        <% end %>
+      </div>
+    </div>
+  </nav>
+</div>

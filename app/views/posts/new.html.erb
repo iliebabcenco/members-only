@@ -1,7 +1,7 @@
-<% form_with model @posts do |f| %>
+<%= form_with model: @post do |f| %>
 
-<% f.input :title, required: true, placeholder: "Introduce the title" %>
-<% f.input :body, required: true, placeholder: "Introduce the content..." %>
-<% f.button :submit %>
+<%= f.text_field :title, required: true, placeholder: "Introduce the title" %>
+<%= f.text_field :body, required: true, placeholder: "Introduce the content..." %>
+<%= f.button :submit %>
 
 <% end %>
