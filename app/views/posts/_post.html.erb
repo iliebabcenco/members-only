@@ -1,4 +1,7 @@
 <div>
   <h4><%= post.title %></h4>
   <div><%= post.body %></div>
+  <% if member_signed_in? %>
+    <p><%= post.member.username %></p>
+  <% end %>
 </div>
